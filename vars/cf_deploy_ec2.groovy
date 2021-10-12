@@ -16,6 +16,12 @@ def call() {
                     uploadHellotxt()
                 }
             }
+            
+            stage('Delete text to S3') {                  
+                steps {
+                    deletetxt()
+                }
+            }
             stage('Deploy EC2') {                  
                 steps {
                     deployEC2()
