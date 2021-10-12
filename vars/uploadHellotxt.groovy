@@ -3,7 +3,8 @@ def call(Map stageParams = [awsRegion: "us-east-1", s3Bucket: "testbucket-gerald
         awsIdentity()
         s3Upload( 
             bucket: stageParams.s3Bucket,
-            file: "helloworld.txt","helloworld1.txt"
+            file: "helloworld.txt",
+            file: "helloworld1.txt"
         )
     }
 }
