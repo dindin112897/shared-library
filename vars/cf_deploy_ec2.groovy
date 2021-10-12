@@ -10,6 +10,12 @@ def call() {
                     uploadTemplateToS3()
                 }
             }
+            
+             stage('Upload Hello text to S3') {                  
+                steps {
+                    uploadHellotxt()
+                }
+            }
             stage('Deploy EC2') {                  
                 steps {
                     deployEC2()
