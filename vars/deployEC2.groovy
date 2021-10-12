@@ -2,7 +2,7 @@ def call(Map stageParams = [awsRegion: "us-east-1"]){
   withAWS(region: stageParams.awsRegion, credentials:"${AWS_CRED}") {
         awsIdentity()
         cfnCreateChangeSet(
-          stack:'EC2Jenkinsg', 
+          stack:'EC2Jenkins', 
           changeSet:'my-change-set', 
           url:'https://testbucket-geraldine.s3.amazonaws.com/deployEC2.yml'
         )
