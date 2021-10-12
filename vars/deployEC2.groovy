@@ -4,7 +4,7 @@ def call(Map stageParams = [awsRegion: "us-east-1"]){
         cfnCreateChangeSet(
           stack:'EC2Jenkinsg', 
           changeSet:'my-change-set', 
-          url:'https://test-bucket-10112021.s3.amazonaws.com/deployEC2.yml'
+          url:'https://testbucket-geraldine.s3.amazonaws.com/deployEC2.yml'
         )
         cfnExecuteChangeSet(
           stack:'EC2Jenkins', 
