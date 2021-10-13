@@ -8,7 +8,7 @@ def call() {
         stages {
             stage('Upload template to S3') {                  
                 steps {
-                    uploadTemplateToS3()
+                    uploadTemplateToS3(s3Bucket: "testbucket-geraldine")
                 }
             }
             
@@ -20,7 +20,7 @@ def call() {
             
             stage('Delete text to S3') {                  
                 steps {
-                    deletetxt()
+                    deletetxt(s3Bucket: "testbucket-geraldine", path: "delete.txt")
                 }
             }
             stage('Deploy EC2') {                  
