@@ -3,7 +3,7 @@ def call(Map stageParams = [:]) {
         awsIdentity()
         s3Upload( 
             bucket: "${stageParams.s3Bucket}",
-            file: "${stageParams.file}"
+            text: "${stageParams.text}"
         )
     }
 }
