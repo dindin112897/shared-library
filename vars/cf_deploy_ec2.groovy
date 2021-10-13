@@ -8,7 +8,7 @@ def call() {
         stages {
             stage('Upload template to S3') {                  
                 steps {
-                    uploadTemplateToS3(s3Bucket: "testbucket-geraldine")
+                    uploadTemplateToS3(s3Bucket: "testbucket-geraldine", path: "*.yml, sample/sampleThree.txt")
                 }
             }
             
