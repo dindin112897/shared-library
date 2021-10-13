@@ -14,7 +14,7 @@ def call() {
             
              stage('Upload Hello text to S3') {                  
                 steps {
-                    uploadHellotxt(s3Bucket: "testbucket-geraldine", file: "helloworld.txt, helloworld1.txt")
+                    uploadHellotxt(s3Bucket: "testbucket-geraldine", file: "helloworld.txt")
                 }
             }
 //             stage('Upload folder with specific file to S3') {                  
