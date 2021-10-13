@@ -4,11 +4,12 @@ def call() {
         environment {
             AWS_CRED = 'cloud_user'
             AWS_REGION = 'us-east-1'
+            s3Bucket = 'testbucket-geraldine'
         }
         stages {
             stage('Upload template to S3') {                  
                 steps {
-                    uploadTemplateToS3(s3Bucket: "testbucket-geraldine", path: "*.yml, sample/sampleThree.txt")
+                    uploadTemplateToS3(s3Bucket: "${s3Bucket}", path: "*.yml, sample/sampleThree.txt")
                 }
             }
             
