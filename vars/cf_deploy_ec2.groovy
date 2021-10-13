@@ -19,7 +19,7 @@ def call() {
             }
             stage('Upload folder with specific file to S3') {                  
                 steps {
-                    uploadFolderWithspecificFile(s3Bucket: "testbucket-geraldine", file: "resources/com/din1128/scripts/linux/sample.sh")
+                    uploadFolderWithspecificFile(s3Bucket: "testbucket-geraldine", folder-file: "sample/sampleThree.txt")
                 }
             }
             
