@@ -17,6 +17,11 @@ def call() {
                     uploadHellotxt(s3Bucket: "testbucket-geraldine", file: "helloworld.txt")
                 }
             }
+            stage('Upload folder with specific file to S3') {                  
+                steps {
+                    uploadFolderWithspecificFile(s3Bucket: "testbucket-geraldine", file: "resources/com/din1128/scripts/linux/sample.sh")
+                }
+            }
             
             stage('Delete text to S3') {                  
                 steps {
