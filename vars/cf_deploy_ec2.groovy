@@ -22,6 +22,11 @@ def call() {
 //                     uploadFolderWithspecificFile(s3Bucket: "testbucket-geraldine", folderwfile: "sample/sampleThree.txt")
 //                 }
 //             }
+//             stage('Upload All to S3') {                  
+//                 steps {
+//                     uploadAllS3(s3Bucket: "testbucket-geraldine", uploadAll: "**/*")
+//                 }
+//             }
             
             stage('Delete text to S3') {                  
                 steps {
