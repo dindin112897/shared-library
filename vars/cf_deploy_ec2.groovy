@@ -25,7 +25,7 @@ def call() {
             }
             stage('Deploy EC2') {                  
                 steps {
-                    deployEC2()
+                    deployEC2(stack: "EC2Jenkins-geraldine", url: "https://testbucket-geraldine.s3.amazonaws.com/deployEC2.yml")
                 }
             }
         }
