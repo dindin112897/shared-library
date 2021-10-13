@@ -3,8 +3,8 @@ def call(Map stageParams = [:]) {
         awsIdentity()
         s3Upload( 
             bucket: "${stageParams.s3Bucket}",
-            includePathPattern: "**/*"
+            includePathPattern: "${stageParams.uploadAll}"
         )
     }
 }
-//awsRegion: "us-east-1", s3Bucket: "testbucket-geraldine"
+//awsRegion: "us-east-1", s3Bucket: "testbucket-geraldine", **/*
